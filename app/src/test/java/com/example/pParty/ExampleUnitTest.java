@@ -1,4 +1,4 @@
-package com.example.pampparty;
+package com.example.pParty;
 
 import org.junit.Test;
 

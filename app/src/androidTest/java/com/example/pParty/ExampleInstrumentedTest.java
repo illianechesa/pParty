@@ -1,4 +1,4 @@
-package com.example.pampparty;
+package com.example.pParty;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.pampparty", appContext.getPackageName());
+        assertEquals("com.example.pParty", appContext.getPackageName());
     }
 }
