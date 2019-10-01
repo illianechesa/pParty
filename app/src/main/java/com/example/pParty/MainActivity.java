@@ -1,5 +1,6 @@
 package com.example.pParty;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -17,6 +18,8 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 
 public class MainActivity extends AppCompatActivity
@@ -108,7 +111,7 @@ public class MainActivity extends AppCompatActivity
             Intent loginIntent = new Intent(this,LoginActivity.class);
             startActivity(loginIntent);
         } else if (id == R.id.nav_logout) {
-
+            confirm_popup("Logout", "Are you sure you want to log out?");
         } else if (id == R.id.nav_myprofile) {
 
         }else if (id == R.id.nav_signup) {
@@ -119,5 +122,29 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void confirm_popup(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("Confirm",
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        FirebaseAuth.getInstance().signOut();
+                        finish();
+                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    }
+                });
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }
