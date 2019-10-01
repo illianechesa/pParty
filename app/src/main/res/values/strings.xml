@@ -1,4 +1,5 @@
 <resources>
+    <!-- App settings -->
     <string name="app_name">pParty</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -7,6 +8,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Items -->
     <string name="menu_map">Map</string>
     <string name="menu_locals">Locals</string>
     <string name="menu_trends">Trends</string>
@@ -14,4 +16,16 @@
     <string name="menu_signup">Sign up</string>
     <string name="menu_profile">My profile</string>
     <string name="menu_logout">Log out</string>
+
+    <!-- Login and SignUp-->
+    <string name="already_loged">You are logged in</string>
+    <string name="ask_login">Please Login</string>
+    <string name="enter_email">Please enter email id</string>
+    <string name="empty_fields">Fields Are Empty!</string>
+    <string name="login_error">Login Error, Please Login Again</string>
+    <string name="signup_unsuccessful">SignUp Unsuccessful, Please Try Again</string>
+    <string name="error_ocurred">Error Occurred!</string>
+    <string name="different_passwords">Passwords are not the same!</string>
+
+
 </resources>
